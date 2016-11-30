@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <style>
+      html {
+        background: radial-gradient(#262626, #0d0d0d) no-repeat;
+        min-height: 100%;
+        font-family: "Bungee";
+      }
+
+      html, body, #wrapper {
+        height: 100%;
+        margin: 0;
+      }
+
+      #wrapper {
+        display: flex;
+        color: #EEE;
+      }
+
+      div {
+        margin: auto;
+        text-align: center;
+      }
+
+      h1 {
+        margin: auto;
+        font-size: 2em;
+      }
+      h1 > span {
+        position: relative;
+      }
+      h1 > span:nth-child(1) {
+        z-index: 2;
+        left: 22px;
+      }
+      h1 > span:nth-child(1) > span:nth-child(1) {
+        position: relative;
+        left: 10px;
+      }
+      h1 .color {
+        color: #f8954e;
+        font-size: 2em;
+      }
+      h1 .bordered {
+        text-shadow: 1px -1px 0px #000, 1px 1px 0px #000;
+      }
+      h1 .gray {
+        color: #444;
+      }
+
+      h3, h5 {
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="wrapper">
+      <div>
+        <h1>
+          <span><span class="bordered">s</span><span class="color">MA</span><span class="bordered">r</span></span><span><span class="color">TH</span><span class="bordered">Y</span></span><span><span class="gray">.io</span></span>
+        </h1>
+        <h3>Smart SVG Mathematic Library </h3>
+        <h5>Coming soon - by Arthy</h5>
+      </div>
+    </div>
+
+  </body>
+</html>
