@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <title>sMArTHy</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="../smarthy.bundle.js"></script>
+  </head>
+  <body>
+
+    <div id="wrapper">
+      <div id="box"></div>
+    </div>
+
+    <!-- EXAMPLE -->
+
+
+    <nav id="dev-nav">
+      <strong>No UI / No Anim</strong>
+      <a href="cartesian.html" class="active">Cartesian &amp; Events</a>
+      <a href="points.html">Points</a>
+      <a href="paths.html">Paths</a>
+    </nav>
+<pre id="dev-doc-opts">
+opts = {
+    cartesian: {
+    pos: {
+      x: -1,
+      y: -.5,
+    },
+    scale: {
+      value: 100,
+      strenght: 1.1,
+      min: .01,
+      max: 100000,
+    },
+    display: {
+      axis: true,
+      ruler: true,
+      orthonormal: true,
+      scale: true
+    }
+  },
+  events: {
+    drag: true,
+    scale: true
+  }
+}
+</pre>
+<pre id="dev-doc-methods">
+smarthy.Cartesian_getScale(['value', 'min', 'max', strenght])
+smarthy.Cartesian_getPosition()
+smarthy.Cartesian_getDisplay(['axis', 'ruler', 'orthinormal', 'scale'])
+smarthy.Cartesian_zoomIn()
+smarthy.Cartesian_zoomOut()
+smarthy.Cartesian_setScale(['value', 'min', 'max', strenght], bool)
+smarthy.Cartesian_setPosition(pos)
+smarthy.Cartesian_translate(pos)
+smarthy.Cartesian_setDisplay(['axis', 'ruler', 'orthinormal', 'scale'], bool)
+smarthy.Cartesian_getScreenPosition(pos)
+smarthy.Cartesian_getPositionFromScreen(pos)
+</pre>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function(event) {
+        let otps = {
+          theme: 'dark',
+          cartesian: {
+            pos: {
+              x: -1,
+              y: -.5,
+            },
+            scale: {
+              value: 100,
+              strenght: 1.1,
+              min: .01,
+              max: 100000,
+            },
+            display: {
+              axis: true,
+              ruler: true,
+              orthonormal: true,
+              scale: true
+            }
+          },
+          events: {
+            drag: true,
+            scale: true
+          }
+        }
+        // Put it on window to allow dev to log `smarthy` on console
+        window.smarthy = new Smarthy(document.getElementById('box'), otps)
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background: #EEE;
+}
+#wrapper {
+  position: absolute;
+  top:0;
+  bottom:0;
+  right:200px;
+  left:200px;
+  display: flex;
+  transition: all .5s;
+}
+@media (max-width: 1024px) {
+  #wrapper {
+    right: 0px;
+  }
+}
+@media (max-width: 600px) {
+  #wrapper {
+    left: 0px;
+  }
+}
+#box {
+  background: #FFF;
+  box-shadow: 1px 1px 3px rgba(128,128,128,.5);
+  width: 90%;
+  height: 50%;
+  margin: auto;
+}
+
+nav#dev-nav, .dev-message {
+  font-family: 'monospace';
+}
+nav#dev-nav {
+  position: absolute;
+}
+nav#dev-nav a {
+  display: block;
+  background: rgba(128,128,128,.5);
+  text-decoration: none;
+  margin: 10px;
+  padding: 5px;
+  color: #EEE;
+  transition: all 0.5s;
+}
+nav#dev-nav a:hover, nav#dev-nav a.active {
+  text-decoration: none;
+  color: #01E36B;
+  background: rgba(64,64,64,.75);
+}
+.dev-message {
+  position: absolute;
+  top: 40px;
+  left: 225px;
+  color: #AAA;
+  font-size: 2em;
+}
+#dev-doc-opts, #dev-doc-methods {
+  position: absolute;
+  bottom: 18px;
+  background: rgba(64,64,64,.8);
+  color: #EEE;
+  font-size: .8rem;
+  padding: 5px;
+}
+#dev-doc-opts:before, #dev-doc-methods:before {
+  position: absolute;
+  top: -1.4rem;
+  left: 0;
+  line-height: 1.4rem;
+  font-weight: bold;
+  color: #000;
+  background: rgba(238,238,238,.5);
+  padding: 0px 10px;
+}
+#dev-doc-opts {
+  width: 200px;
+}
+#dev-doc-opts:before {
+  content: "Options";
+}
+#dev-doc-methods {
+  left: 225px
+}
+#dev-doc-methods:before {
+  content: "Methods";
+}

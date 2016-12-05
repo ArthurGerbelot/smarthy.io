@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>sMArTHy</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="../smarthy.bundle.js"></script>
+  </head>
+  <body>
+
+    <div id="wrapper">
+      <div id="box"></div>
+    </div>
+
+    <!-- EXAMPLE -->
+
+    <nav id="dev-nav">
+      <strong>No UI / No Anim</strong>
+      <a href="cartesian.html">Cartesian &amp; Events</a>
+      <a href="points.html" class="active">Points</a>
+      <a href="paths.html">Paths</a>
+    </nav>
+<pre id="dev-doc-opts">
+opts = {
+  theme: 'dark',
+  els: [
+    {
+      type: 'point',
+      pos: {
+        x: -1,
+        y: -1
+      }
+    },
+    {
+      type: 'point',
+      pos: {
+        x: 1,
+        y: 1.5
+      },
+      editable: true
+    },
+  ]
+}
+</pre>
+<pre id="dev-doc-methods">
+smarthy.Points_getPoints()
+let p = smarthy.Points_addPoint()
+smarthy.Points_getPoint(p.id)
+p.getPosition()
+p.setPosition(pos)
+p.getEditable()
+p.setEditable(bool)
+p.getSelected()
+p.setSelected(bool)
+p.translate(delta)
+p.getDistanceWith(el || pos)
+</pre>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function(event) {
+        let otps = {
+          theme: 'dark',
+          els: [
+            { type: 'point', pos: {x: -1, y: -1} } ,
+            { type: 'point', pos: {x: 1, y: 1.5}, editable: true },
+          ],
+          events: {
+            edit: true,
+          }
+        }
+        // Put it on window to allow dev to log `smarthy` on console
+        window.smarthy = new Smarthy(document.getElementById('box'), otps)
+      })
+    </script>
+  </body>
+</html>
